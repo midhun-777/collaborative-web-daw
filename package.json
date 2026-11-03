@@ -1,0 +1,20 @@
+{
+  "name": "collaborative-daw",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web-based collaborative DAW with real-time piano roll using Socket.io and Tone.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "nanoid": "^5.0.7",
+    "socket.io": "^4.7.5"
+  }
+}
+
+

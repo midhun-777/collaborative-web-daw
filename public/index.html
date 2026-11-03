@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Collaborative DAW</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Collaborative DAW</h1>
+      <div class="room-controls">
+        <input id="roomId" placeholder="Room ID" />
+        <button id="joinRoom">Join</button>
+        <span id="status"></span>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="transport">
+        <label>Tempo <input id="tempo" type="number" min="40" max="240" value="120" /></label>
+        <button id="play">Play</button>
+        <button id="stop">Stop</button>
+        <button id="addNote">Add Random Note</button>
+      </section>
+
+      <section class="piano-roll">
+        <div class="roll-header">Piano Roll (Track: Synth Lead)</div>
+        <div id="rollGrid" class="roll-grid"></div>
+      </section>
+      <section>
+        <h3>Notes</h3>
+        <ul id="notesList"></ul>
+      </section>
+    </main>
+
+    <!-- Socket.io client -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Tone.js CDN -->
+    <script src="https://unpkg.com/tone@14.8.49/build/Tone.js"></script>
+    <script src="/client.js" type="module"></script>
+  </body>
+  </html>
+
+
